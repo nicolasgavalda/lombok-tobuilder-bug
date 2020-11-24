@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceCompatibility = 1.11
+
+repositories {
+    mavenCentral()
+}
+
+mainClassName = 'tests.lombok.TestToBuilder'
+
+ext {
+    lombokVersion = "1.18.16"
+}
+
+dependencies {
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+}
